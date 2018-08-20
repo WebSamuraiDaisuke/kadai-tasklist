@@ -3,13 +3,16 @@
 のTask詳細ページ
 </h1>
 
-<p>
-<%= @tasks.status %>
-<%= @tasks.content %>
-</p>
+<table class="table">
+    <tbody>
+<tr><th>ID</th><td><%= @tasks.id %></td></tr>
+<tr><th>タイトル</th><td><%= @tasks.status %></td></tr>
+<tr><th>タスク</th><td><%= @tasks.content %></td></tr>
+    </tbody>
+</table>
 
-<%= link_to '一覧に戻る', tasks_path %>
+<%= link_to '一覧に戻る', tasks_path, {class: "btn btn-primary"} %>
 
-<%= link_to 'このTaskを編集する', edit_task_path(@tasks) %>
+<%= link_to 'このTaskを編集する', edit_task_path(@tasks), {class: "btn btn-default"} %>
 
-<%= link_to 'このTaskを削除する', @tasks, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to 'このTaskを削除する', @tasks, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: "btn btn-danger"%>

@@ -18,19 +18,18 @@
   
 <% end %>
 
+<div class="form-group">
 <%= f.label :status, 'ステータス' %>
+<%= f.text_field :status , {class: "form-control col-lg-offset-3"}%>
+<div class="col-lg-3"></div>
+</div>
 
-  
-<%= f.text_field :status %>
+<div class="form-group">
+<%= f.label :content, 'メッセージ'%>
+<%= f.text_field :content, {class: "form-control"} %>
+</div>
 
-
-<%= f.label :content, 'メッセージ' %>
-
-  
-<%= f.text_field :content %>
-
-
-  
-<%= f.submit '投稿' %>
+<br>  
+<%= f.submit '投稿' , { class: "btn btn-primary float" }%>
 
 <% end %>
