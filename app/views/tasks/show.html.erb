@@ -3,12 +3,19 @@
 のTask詳細ページ
 </h1>
 
-<table class="table">
-    <tbody>
-<tr><th>ID</th><td><%= @tasks.id %></td></tr>
-<tr><th>タイトル</th><td><%= @tasks.status %></td></tr>
-<tr><th>タスク</th><td><%= @tasks.content %></td></tr>
-    </tbody>
+<table class="table table-bordered">
+  <tr>
+    <th>id</th>
+    <td><%= @tasks.id %></td>
+  </tr>
+  <tr>
+    <th>ステータス</th>
+    <td><%= @tasks.status %></td>
+  </tr>
+  <tr>
+    <th>メッセージ</th>
+    <td><%= @tasks.content %></td>
+  </tr>
 </table>
 
 <%= link_to '一覧に戻る', tasks_path, {class: "btn btn-primary"} %>
