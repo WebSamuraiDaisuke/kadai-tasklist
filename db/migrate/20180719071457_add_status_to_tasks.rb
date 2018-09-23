@@ -3,3 +3,4 @@ class AddtitleToTasks < ActiveRecord::Migration[5.0]
     add_column :tasks, :title, :string
   end
 end
+
