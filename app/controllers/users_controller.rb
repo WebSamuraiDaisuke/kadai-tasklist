@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @tasks = current_user.tasks.all.page(params[:page])
   end
 
   def new
